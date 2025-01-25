@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <!-- CardView container -->
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/courseCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_margin="8dp"
+        app:layout_constraintWidth_percent="1">
+
+        <!-- Content inside the CardView -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Course Image -->
+            <ImageView
+                android:id="@+id/courseImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="8dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"/>
+
+            <!-- Course Title -->
+            <TextView
+                android:id="@+id/courseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course Title"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- Course Description -->
+            <TextView
+                android:id="@+id/courseDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Short description of the course goes here"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Course Price and Instructor -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="clip_horizontal"
+
+                >
+
+                <!-- Price -->
+                <TextView
+                    android:id="@+id/coursePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$99.99"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:layout_marginEnd="16dp"/>
+
+                <!-- Instructor -->
+                <TextView
+                    android:id="@+id/courseInstructor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instructor Name"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/courseNumberOfStudent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NumberOfStudent"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray" />
+
+
+                <TextView
+                    android:id="@+id/courseCountHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CountHours"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray" />
+
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
